@@ -1,24 +1,30 @@
 package Swing;
+
 import javax.swing.JFrame;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
-import java.awt.*;
+
+import java.awt.Color;
+import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 // JFRAME = GUI Window
 public class MyFrame extends JFrame implements ActionListener {
+    
     ImageIcon frameIcon;
     JButton button;
     ImageIcon buttonIcon;
 
-    private final int WIDTH = 600;
-    private final int HEIGHT = 600;
+    private static final int WIDTH = 600;
+    private static final int HEIGHT = 600;
+
     MyFrame() {
         this.initFrame();
         this.createButton();
         this.setVisible(true);
     }
+    
     private void initFrame(){
         this.setSize(WIDTH, HEIGHT);
         this.setResizable(false);
@@ -32,6 +38,7 @@ public class MyFrame extends JFrame implements ActionListener {
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         // this.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
     }
+
     private void createButton(){
         button = new JButton();
         button.setBounds(WIDTH/2-50,HEIGHT/2-50,200,200);
